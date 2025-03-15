@@ -1,0 +1,16 @@
+id = "base64-slash-command"
+name = "Base64 Slash Command"
+version = "0.0.1"
+schema_version = 1
+
+authors = ["Miguel Martens <mail@miguelmartens.com>"]
+description = "Provides slash commands to encode input to base64 and decode base64 input to plain text."
+repository = "https://github.com/miguelmartens/zed-base64-slash-command"
+
+[slash_commands.encode]
+description = "Encodes the provided input into base64."
+requires_argument = true
+
+[slash_commands.decode]
+description = "Decodes the provided base64 input into plain text."
+requires_argument = true
