@@ -62,6 +62,22 @@ The extension registers two slash commands via the `extension.toml` file:
 
 Results are returned as a `SlashCommandOutput`, which includes both the text result and a section label for display in the Assistant panel.
 
+# Releases
+
+This repository uses a GitHub Action (configured in `release.yml`) based on the [zed-extension-action](https://github.com/huacnlee/zed-extension-action) to automate releases.
+
+**How it works:**
+- **Trigger:** When you push a new tag (e.g., `v1.2.3`), the action is triggered automatically.
+- **Validation:** It first verifies that the tag follows a valid version format.
+- **Pull Request:** The action then creates a pull request to update the extension version in the target repository.
+- **Merge & Release:** Once the pull request is approved and merged, the new version of the extension is released.
+
+**How to release:**
+1. Create and push a new tag in the format `v*` (for example, `v1.2.3`).
+2. The GitHub Action validates the tag, creates the pull request, and pushes the changes.
+3. The target repository is the forked repo, [miguelmartens/extensions (Zed Extensions)](https://github.com/miguelmartens/extensions), which is the fork of the [zed-industries/extensions](https://github.com/zed-industries/extensions) repository.
+4. After the PR is merged, the extension release process is completed automatically.
+
 ## License
 
 This project is licensed under the MIT License.
