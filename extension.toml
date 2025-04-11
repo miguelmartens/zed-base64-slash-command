@@ -1,6 +1,6 @@
 id = "base64-slash-command"
 name = "Base64 Slash Command"
-version = "0.0.1"
+version = "0.1.0"
 schema_version = 1
 
 authors = ["Miguel Martens <mail@miguelmartens.com>"]
