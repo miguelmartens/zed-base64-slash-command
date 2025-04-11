@@ -8,5 +8,5 @@ path = "src/base64-slash-command.rs"
 crate-type = ["cdylib"]
 
 [dependencies]
-zed_extension_api = "0.2.0"
+zed_extension_api = "0.3.0"
 base64 = "0.22.1"
