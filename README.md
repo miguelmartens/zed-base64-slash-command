@@ -51,14 +51,14 @@ Open the Assistant panel and type:
 - **`/decode <base64 string>`**
   Decodes the provided Base64 string back to plain text.
 
-The extension will output the transformed text along with a label indicating the operation performed.
+The extension will output the transformed text along with a label indicating the operation performed. When a non-Base64 string is provided, it will display an error message.
 
 ## How It Works
 
 The extension registers two slash commands via the `extension.toml` file:
 
 - **encode:** Joins the command arguments into a string and encodes it using the `base64::engine::general_purpose::STANDARD` engine.
-- **decode:** Attempts to decode the input string from Base64 back to bytes and then converts those bytes into a UTF‑8 string.
+- **decode:** Attempts to decode the input string from Base64 back to bytes and then converts those bytes into a UTF‑8 string. If the input is not a valid Base64 string, it will display an error message.
 
 Results are returned as a `SlashCommandOutput`, which includes both the text result and a section label for display in the Assistant panel.
 
